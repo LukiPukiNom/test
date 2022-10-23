@@ -1,0 +1,47 @@
+--[[
+So recently there was a website called cheater.fun that completely stole my code and decided to completely reupload my original loader and throw their name over it.
+This is personally not okay as I've spent weeks crafting the best methods to prevent any sort of issue and then a website comes and rips my loader a couple days later.
+
+My original: 
+https://user-images.githubusercontent.com/90345430/196905506-de978fe4-70db-4b84-91a4-03a729ac5b03.png
+
+Their "Skid-Rip":
+https://user-images.githubusercontent.com/90345430/196905686-bdf3962c-3d9d-4ce4-9108-ccee75367f6c.png
+
+I appreciate that they credited me, it's the fact that they threw their name over my work after already taking it from my github.
+PLEASE, do not be like the people over at this website and just. do. better.
+]]
+
+local notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Valenity/NotificationUI/main/Cheater.FunAreLeeches!"))()
+function notify(fuckyou,title,description,icon,color)
+    notif:message {
+        Title = El Bacalao Hub" | <font color='rgb(".. color ..")'>"..title.."</font>",
+        Description = description,
+        Icon = icon
+    }
+end
+local games = {
+    ["Halloween Night"] = 1046190774,
+    ["Lemonade Tycoon"] = 10675042838,
+    ["Slime Tower Tycoon"] = 10675066724,
+    ["Racing Rocket"] = 10676523834,
+    ["Merge Simulator"] = 10925589760,
+    ["Robowling"] = 340227283,
+    ["Theme Park Tycoon 2"] = 69184822,
+    ["Idle Heroes"] = 9264596435,
+    ["High School Life"] = 92604236,
+    ["Truck Factory Tycoon"] = 10893141806
+}
+
+notify("El Bacalao Hub","Initiating","Loading El Bacalao Hub!",11359177817,"255, 100, 100")
+wait(1.5)
+for _, x in pairs(games) do
+    if x == game.PlaceId then
+        notify("El Bacalao Hub","Found!","Playing: ".._,11359177817,"75, 100, 200")
+        wait(1)
+        notify("El Bacalao Hub","Found!","Game ID: "..x,11359177817,"75, 100, 200")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Valenity/ParadiseHub-Open-Source/main/Games/"..x))()
+    else
+        notify("El Bacalao Hub","Not Found!","Not a Supported Game!",nil,"255, 75, 75")
+    end
+end
